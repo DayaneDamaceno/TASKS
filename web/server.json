@@ -1,0 +1,30 @@
+{
+  "escola": [
+    {
+      "id": 1,
+      "title": "Pesquisa de biologia",
+      "description": "É importante destacar que a Biologia estuda também diversos aspectos atuais e relevantes para a humanidade, permitindo que compreendamos a vida como um todo e tornando possível que entendamos",
+      "status": false,
+      "tag": "Urgente",
+      "finalDate": "2 Days"
+    }
+  ],
+  "trabalho": [
+    {
+      "id": 2,
+      "title": "Pagina de vendas",
+      "description": "Criar uma landing page para um site de cursos de ingles, espanhol e frances. Usar como cor principal roxo",
+      "status": false,
+      "tag": "Moderado",
+      "finalDate": "1 Week"
+    },
+    {
+      "id": 3,
+      "title": "Modelagem do Banco",
+      "description": "Levantar uma lista de entidades para o projeto de Loja de ténis, e criar um diagrama de entidades e relacionamento para apresentar",
+      "status": false,
+      "tag": "Tranquilo",
+      "finalDate": "3 Weeks"
+    }
+  ]
+}
