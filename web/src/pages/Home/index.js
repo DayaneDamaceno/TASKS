@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
 import { MdDateRange, MdDone } from 'react-icons/md';
 
 import { Header, TaskList, ColumList, Task, Tag } from './styles';
-
 import logo from '../../assets/logo.svg';
 
 import api from '../../services/api';
+import * as TaskActions from '../../store/modules/task/actions';
 
-function Home() {
+export default function Home() {
   const [school, setSchool] = useState([]);
   const [job, setJob] = useState([]);
   const [done, setDone] = useState([]);
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     async function loadTasks() {
-      const responseSchool = await api.get('tasks?from=escola');
-      const responseJob = await api.get('tasks?from=trabalho');
-      const responseDone = await api.get('tasks?from=true');
+      const responseSchool = await api.get('tasks?from=escola&status=false');
+      const responseJob = await api.get('tasks?from=trabalho&status=false');
+      const responseDone = await api.get('tasks?status=true');
 
       setSchool(responseSchool.data);
       setJob(responseJob.data);
@@ -25,6 +29,10 @@ function Home() {
 
     loadTasks();
   }, []);
+
+  function handleMarkDone(id) {
+    dispatch(TaskActions.markDoneRequest(id));
+  }
 
   return (
     <>
@@ -46,7 +54,7 @@ function Home() {
                   <MdDateRange size={28} color="#8E84FF" /> {task.finalDate}
                 </span>
 
-                <button type="button">
+                <button type="button" onClick={() => handleMarkDone(task.id)}>
                   <MdDone size={20} color="#FFF" />
                 </button>
               </footer>
@@ -66,7 +74,7 @@ function Home() {
                   <MdDateRange size={28} color="#8E84FF" /> {task.finalDate}
                 </span>
 
-                <button type="button">
+                <button type="button" onClick={() => handleMarkDone(task.id)}>
                   <MdDone size={20} color="#FFF" />
                 </button>
               </footer>
@@ -75,18 +83,15 @@ function Home() {
         </ColumList>
         <ColumList>
           <h1>📌 Done! </h1>
-          <Task done>
-            <h1>Pesquisa de Biologia</h1>
-            <Tag status="Done">Done</Tag>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
-            </p>
-          </Task>
+          {done.map((task) => (
+            <Task done>
+              <h1>{task.title}</h1>
+              <Tag status="Done">Done</Tag>
+              <p>{task.description}</p>
+            </Task>
+          ))}
         </ColumList>
       </TaskList>
     </>
   );
 }
-
-export default Home;
