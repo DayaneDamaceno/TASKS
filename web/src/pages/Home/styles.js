@@ -31,7 +31,7 @@ export const ColumList = styled.ul`
 `;
 
 export const Task = styled.li`
-  width: 250px;
+  width: 260px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -112,7 +112,7 @@ export const Tag = styled.span`
     `}
 
   ${(props) =>
-    props.status === 'Traquilo' &&
+    props.status === 'Tranquilo' &&
     css`
       background: #d3fee7;
       color: #48e08e;
