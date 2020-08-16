@@ -4,14 +4,14 @@ Projeto para fins de estudo sobre Redux e Redux Saga, que tem como proposta gere
 
 ![tela](https://user-images.githubusercontent.com/63814261/90344128-0dccf300-dfed-11ea-946f-baf46bd51d1f.gif)
 
-#### Funcionalidades
+### Funcionalidades
 
 - Listagem de tarefas por categoria
 - Listagem de tarefas concluídas
 - Marcar tarefa como concluída
 - Loading para requisições
 
-#### Tecnologias utilizadas
+### Tecnologias utilizadas
 
 - [ReactJS](https://pt-br.reactjs.org/)
 - [Redux](https://redux.js.org/)
