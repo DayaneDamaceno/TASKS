@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { MdDateRange, MdDone } from 'react-icons/md';
 
-import { Header, TaskList, ColumList, Task, Tag } from './styles';
+import { Header, TaskList, ColumList, Task, Tag, Loading } from './styles';
 import logo from '../../assets/logo.svg';
+import load from '../../assets/load.gif';
 
 import * as TaskActions from '../../store/modules/task/actions';
 
@@ -12,6 +13,7 @@ export default function Home() {
   const school = useSelector((state) => state.task.school);
   const job = useSelector((state) => state.task.job);
   const done = useSelector((state) => state.task.done);
+  const loading = useSelector((state) => state.task.loading);
 
   const dispatch = useDispatch();
 
@@ -29,61 +31,73 @@ export default function Home() {
         <img src={logo} alt="logo" />
       </Header>
 
-      <TaskList>
-        <ColumList>
-          <h1>📕 Escola</h1>
-          {school &&
-            school.map((task) => (
-              <Task key={task.id}>
-                <h1>{task.title}</h1>
-                <Tag status={task.tag}>{task.tag}</Tag>
-                <p>{task.description}</p>
+      {loading ? (
+        <Loading>
+          <img src={load} alt="loading" />
+        </Loading>
+      ) : (
+        <TaskList>
+          <ColumList>
+            <h1>📕 School</h1>
+            {school &&
+              school.map((task) => (
+                <Task key={task.id}>
+                  <h1>{task.title}</h1>
+                  <Tag status={task.tag}>{task.tag}</Tag>
+                  <p>{task.description}</p>
 
-                <footer>
-                  <span>
-                    <MdDateRange size={28} color="#8E84FF" /> {task.finalDate}
-                  </span>
+                  <footer>
+                    <span>
+                      <MdDateRange size={28} color="#8E84FF" /> {task.finalDate}
+                    </span>
 
-                  <button type="button" onClick={() => handleMarkDone(task.id)}>
-                    <MdDone size={20} color="#FFF" />
-                  </button>
-                </footer>
-              </Task>
-            ))}
-        </ColumList>
-        <ColumList>
-          <h1>💻 Trabalho</h1>
-          {job &&
-            job.map((task) => (
-              <Task key={task.id}>
-                <h1>{task.title}</h1>
-                <Tag status={task.tag}>{task.tag}</Tag>
-                <p>{task.description}</p>
+                    <button
+                      type="button"
+                      onClick={() => handleMarkDone(task.id)}
+                    >
+                      <MdDone size={20} color="#FFF" />
+                    </button>
+                  </footer>
+                </Task>
+              ))}
+          </ColumList>
+          <ColumList>
+            <h1>💻 Job</h1>
+            {job &&
+              job.map((task) => (
+                <Task key={task.id}>
+                  <h1>{task.title}</h1>
+                  <Tag status={task.tag}>{task.tag}</Tag>
+                  <p>{task.description}</p>
 
-                <footer>
-                  <span>
-                    <MdDateRange size={28} color="#8E84FF" /> {task.finalDate}
-                  </span>
+                  <footer>
+                    <span>
+                      <MdDateRange size={28} color="#8E84FF" /> {task.finalDate}
+                    </span>
 
-                  <button type="button" onClick={() => handleMarkDone(task.id)}>
-                    <MdDone size={20} color="#FFF" />
-                  </button>
-                </footer>
-              </Task>
-            ))}
-        </ColumList>
-        <ColumList>
-          <h1>📌 Done! </h1>
-          {done &&
-            done.map((task) => (
-              <Task key={task.id} done>
-                <h1>{task.title}</h1>
-                <Tag status="Done">Done</Tag>
-                <p>{task.description}</p>
-              </Task>
-            ))}
-        </ColumList>
-      </TaskList>
+                    <button
+                      type="button"
+                      onClick={() => handleMarkDone(task.id)}
+                    >
+                      <MdDone size={20} color="#FFF" />
+                    </button>
+                  </footer>
+                </Task>
+              ))}
+          </ColumList>
+          <ColumList>
+            <h1>📌 Done! </h1>
+            {done &&
+              done.map((task) => (
+                <Task key={task.id} done>
+                  <h1>{task.title}</h1>
+                  <Tag status="Done">Done</Tag>
+                  <p>{task.description}</p>
+                </Task>
+              ))}
+          </ColumList>
+        </TaskList>
+      )}
     </>
   );
 }

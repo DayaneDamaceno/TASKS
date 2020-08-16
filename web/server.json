@@ -12,7 +12,7 @@
     {
       "title": "Prova de Matemática",
       "description": "Geometria analítica",
-      "status": false,
+      "status": true,
       "from": "school",
       "tag": "Moderado",
       "finalDate": "5 Days",
@@ -21,7 +21,7 @@
     {
       "title": "Modelagem do Banco",
       "description": "Levantar uma lista de entidades para o projeto de Loja de ténis, e criar um diagrama de entidades e relacionamento para apresentar",
-      "status": true,
+      "status": false,
       "from": "job",
       "tag": "Tranquilo",
       "finalDate": "3 Weeks",
@@ -30,7 +30,7 @@
     {
       "title": "Atualizar conteúdo do app",
       "description": "",
-      "status": false,
+      "status": true,
       "from": "job",
       "tag": "Moderado",
       "finalDate": "1 Weeks",

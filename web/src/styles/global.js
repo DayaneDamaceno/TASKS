@@ -33,4 +33,15 @@ export default createGlobalStyle`
     text-decoration: none;
     color: white;
   }
+
+  ::-webkit-scrollbar{
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #333;
+    border-radius: 10px;
+  }
 `;

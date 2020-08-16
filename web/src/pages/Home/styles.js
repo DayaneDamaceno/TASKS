@@ -137,3 +137,14 @@ export const Tag = styled.span`
   font-size: 12px;
   margin: 10px 0 0;
 `;
+
+export const Loading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+
+  img {
+    height: 100px;
+  }
+`;
