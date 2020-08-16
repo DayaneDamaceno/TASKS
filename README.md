@@ -1,7 +1,7 @@
 <div style="text-align:center">
   
-  <img src="https://user-images.githubusercontent.com/63814261/90344212-e4609700-dfed-11ea-8fcf-bd2a44d0dcb1.png" />
-  
+  ![logo](https://user-images.githubusercontent.com/63814261/90344212-e4609700-dfed-11ea-8fcf-bd2a44d0dcb1.png)
+
 </div>
 
 Projeto para fins de estudo sobre Redux e Redux Saga, que tem como proposta gerenciar nossas tarefas no dia-dia.
