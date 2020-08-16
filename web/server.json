@@ -30,7 +30,7 @@
     {
       "title": "Atualizar conteúdo do app",
       "description": "",
-      "status": true,
+      "status": false,
       "from": "job",
       "tag": "Moderado",
       "finalDate": "1 Weeks",
@@ -39,7 +39,7 @@
     {
       "title": "Design do App WeTrader",
       "description": "",
-      "status": false,
+      "status": true,
       "from": "job",
       "tag": "Tranquilo",
       "finalDate": "2 Weeks",
