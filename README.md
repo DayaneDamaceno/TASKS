@@ -1,21 +1,21 @@
 <div style="text-align:center">
   
-  ![logo](https://user-images.githubusercontent.com/63814261/90344212-e4609700-dfed-11ea-8fcf-bd2a44d0dcb1.png)
-
+  <img src="https://user-images.githubusercontent.com/63814261/90344212-e4609700-dfed-11ea-8fcf-bd2a44d0dcb1.png" />
+  
 </div>
 
 Projeto para fins de estudo sobre Redux e Redux Saga, que tem como proposta gerenciar nossas tarefas no dia-dia.
 
 ![tela](https://user-images.githubusercontent.com/63814261/90344128-0dccf300-dfed-11ea-946f-baf46bd51d1f.gif)
 
-### Funcionalidades
+#### Funcionalidades
 
 - Listagem de tarefas por categoria
 - Listagem de tarefas concluídas
 - Marcar tarefa como concluída
 - Loading para requisições
 
-### Tecnologias utilizadas
+#### Tecnologias utilizadas
 
 - [ReactJS](https://pt-br.reactjs.org/)
 - [Redux](https://redux.js.org/)
