@@ -4,6 +4,8 @@
   
 </div>
 
+
+
 Projeto para fins de estudo sobre Redux e Redux Saga, que tem como proposta gerenciar nossas tarefas no dia-dia.
 
 ![tela](https://user-images.githubusercontent.com/63814261/90344128-0dccf300-dfed-11ea-946f-baf46bd51d1f.gif)
