@@ -3,55 +3,47 @@
     {
       "title": "Pesquisa de biologia",
       "description": "É importante destacar que a Biologia estuda também diversos aspectos atuais e relevantes para a humanidade, permitindo que compreendamos a vida como um todo e tornando possível que entendamos",
-      "status": true,
-      "from": "escola",
+      "status": false,
+      "from": "school",
+      "tag": "Urgente",
       "finalDate": "2 Days",
       "id": 1
     },
     {
-      "title": "Pesquisa de biologia",
-      "description": "É importante destacar que a Biologia estuda também diversos aspectos atuais e relevantes para a humanidade, permitindo que compreendamos a vida como um todo e tornando possível que entendamos",
+      "title": "Prova de Matemática",
+      "description": "Geometria analítica",
       "status": false,
-      "from": "escola",
+      "from": "school",
       "tag": "Moderado",
-      "finalDate": "3 Days",
+      "finalDate": "5 Days",
       "id": 2
     },
     {
-      "id": 3,
-      "title": "Modelagem do Banco",
-      "description": "Levantar uma lista de entidades para o projeto de Loja de ténis, e criar um diagrama de entidades e relacionamento para apresentar",
-      "status": false,
-      "from": "trabalho",
-      "tag": "Tranquilo",
-      "finalDate": "3 Weeks"
-    },
-    {
-      "id": 4,
-      "title": "Modelagem do Banco",
-      "description": "Levantar uma lista de entidades para o projeto de Loja de ténis, e criar um diagrama de entidades e relacionamento para apresentar",
-      "status": false,
-      "from": "trabalho",
-      "tag": "Tranquilo",
-      "finalDate": "3 Weeks"
-    },
-    {
-      "id": 4,
       "title": "Modelagem do Banco",
       "description": "Levantar uma lista de entidades para o projeto de Loja de ténis, e criar um diagrama de entidades e relacionamento para apresentar",
       "status": true,
-      "from": "trabalho",
+      "from": "job",
       "tag": "Tranquilo",
-      "finalDate": "3 Weeks"
+      "finalDate": "3 Weeks",
+      "id": 3
     },
     {
-      "id": 5,
-      "title": "Modelagem do Banco",
-      "description": "Levantar uma lista de entidades para o projeto de Loja de ténis, e criar um diagrama de entidades e relacionamento para apresentar",
-      "status": true,
-      "from": "trabalho",
+      "title": "Atualizar conteúdo do app",
+      "description": "",
+      "status": false,
+      "from": "job",
+      "tag": "Moderado",
+      "finalDate": "1 Weeks",
+      "id": 4
+    },
+    {
+      "title": "Design do App WeTrader",
+      "description": "",
+      "status": false,
+      "from": "job",
       "tag": "Tranquilo",
-      "finalDate": "3 Weeks"
+      "finalDate": "2 Weeks",
+      "id": 5
     }
   ]
 }

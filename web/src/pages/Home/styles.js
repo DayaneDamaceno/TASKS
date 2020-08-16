@@ -36,7 +36,6 @@ export const Task = styled.li`
   height: auto;
   display: flex;
   flex-direction: column;
-  min-height: 150px;
   background: #fff;
   padding: 15px;
   border-radius: 5px;
